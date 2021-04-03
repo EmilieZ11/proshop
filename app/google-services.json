@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "243327796137",
+    "project_id": "easy-marketing-269716",
+    "storage_bucket": "easy-marketing-269716.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243327796137:android:406e1d46d68b219edd7ab8",
+        "android_client_info": {
+          "package_name": "uk.easys.easymarketing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "243327796137-u7i6g5e5thtceepr7vhv6n0n23s8r2gt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "uk.easys.easymarketing",
+            "certificate_hash": "d814b14370d4595325562e52d6193bad20a414d3"
+          }
+        },
+        {
+          "client_id": "243327796137-iu6qpftumt2t6ok6o29tqq7g7iienaic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtRjj9dqa88QYKohRZkmMxNnszGlTCFpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "243327796137-iu6qpftumt2t6ok6o29tqq7g7iienaic.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

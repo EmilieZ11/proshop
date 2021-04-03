@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:context=".Intro"
+    tools:ignore="MissingConstraints,UnusedAttribute">
+
+    <ImageView
+        android:id="@+id/tf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/intro_top_1"
+        android:translationY="-1000dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="1.4" />
+
+    <com.blure.complexview.ComplexView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:rotation="-360"
+        android:scaleX="0"
+        android:scaleY="0"
+        app:layout_constraintBottom_toTopOf="@id/welcomeEn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:radius="70dp"
+        app:shadow="true"
+        app:shadowAlpha="66"
+        app:shadowColor="#000000"
+        app:shadowSpread="2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:background="@drawable/logo_test_1">
+
+            <TextView
+                style="@style/match"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PS"
+                android:textColor="@color/CPO"
+                android:textSize="47sp"
+                android:textStyle="bold" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.blure.complexview.ComplexView>
+
+    <TextView
+        android:id="@+id/welcomeEn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:rotation="-360"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:text="@string/welcomeEN"
+        android:textColor="@color/CPV"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@id/welcomeNative"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <TextView
+        android:id="@+id/welcomeNative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:rotation="-360"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:text="@string/welcomeNative"
+        android:textColor="@color/CPV"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeEn" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/etCL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:background="@drawable/login_et_1"
+        android:elevation="5dp"
+        android:paddingLeft="22dp"
+        android:paddingTop="23dp"
+        android:paddingRight="22dp"
+        android:paddingBottom="23dp"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        tools:ignore="SpUsage">
+
+        <TextView
+            android:id="@+id/countryCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.05"
+            android:paddingRight="13dp"
+            android:text="+44"
+            android:textColor="@color/loginET"
+            android:textSize="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:background="@color/TP"
+            android:inputType="number"
+            android:letterSpacing="0.26"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/loginET"
+            android:textDirection="ltr"
+            android:textSize="25dp"
+            android:theme="@style/loginET"
+            app:layout_constraintLeft_toRightOf="@id/countryCode"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/etHint"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layoutDirection="ltr"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/et"
+            app:layout_constraintLeft_toLeftOf="@id/et"
+            app:layout_constraintRight_toRightOf="@id/et"
+            app:layout_constraintTop_toTopOf="@id/et"
+            tools:ignore="RtlHardcoded" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/enterPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:text="@string/enterPhone"
+        android:textColor="@color/CPV"
+        android:textSize="19.5dp"
+        app:layout_constraintLeft_toLeftOf="@id/etCL"
+        app:layout_constraintRight_toRightOf="@id/etCL"
+        app:layout_constraintTop_toBottomOf="@id/etCL" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/codeSentCL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/enterPhone"
+        app:layout_constraintRight_toRightOf="@id/enterPhone"
+        app:layout_constraintTop_toBottomOf="@id/enterPhone"
+        tools:ignore="SmallSp">
+
+        <TextView
+            android:id="@+id/codeSent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/codeSent"
+            android:textColor="@color/loginET"
+            android:textSize="10.5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Chronometer
+            android:id="@+id/chronometre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:countDown="true"
+            android:textColor="@color/loginET"
+            android:textSize="10.5sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/resendCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/resend_code_1"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:text="@string/resendCode"
+            android:textColor="@color/loginET"
+            android:textSize="8sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/sendCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:background="@drawable/cart_pay_1"
+        android:elevation="3dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:text="@string/sendCode"
+        android:textColor="@color/GREEN_O"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/etCL"
+        app:layout_constraintRight_toRightOf="@id/etCL"
+        app:layout_constraintTop_toBottomOf="@id/codeSentCL"
+        tools:ignore="SpUsage" />
+
+
+    <ImageView
+        android:id="@+id/bf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/intro_bottom_1"
+        android:translationY="1000dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="1.8" />
+</androidx.constraintlayout.widget.ConstraintLayout>

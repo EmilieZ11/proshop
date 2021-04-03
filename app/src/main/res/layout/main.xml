@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:context=".Main"
+    tools:ignore="MissingConstraints,UnusedAttribute">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@color/CP"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tbNav"
+                style="@style/tbIcon"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/tvNavIV"
+                    style="@style/tbIconIV"
+                    android:src="@drawable/navbar_1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tbSearch"
+                style="@style/tbIcon"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/tbSearchIV"
+                    style="@style/tbIconIV"
+                    android:src="@drawable/search_1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <EditText
+                android:id="@+id/tbSearchET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:background="#00000000"
+                android:hint="@string/searchHint"
+                android:textColor="@color/CPO"
+                android:textColorHint="@color/CSV"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/tbSearch"
+                app:layout_constraintEnd_toStartOf="@id/tbSearch"
+                app:layout_constraintStart_toEndOf="@id/tbNav"
+                app:layout_constraintTop_toTopOf="@id/tbSearch" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loading"
+            style="@style/loading"
+            app:layout_constraintBottom_toBottomOf="@id/navHostFragment"
+            app:layout_constraintLeft_toLeftOf="@id/navHostFragment"
+            app:layout_constraintRight_toRightOf="@id/navHostFragment"
+            app:layout_constraintTop_toTopOf="@id/navHostFragment" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/navHostFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:navGraph="@navigation/nav_graph" />
+
+
+        <ImageView
+            android:id="@+id/lFakeRadius"
+            style="@style/fakeRadius"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            android:id="@+id/rFakeRadius"
+            style="@style/fakeRadius"
+            android:rotation="90"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottomSheetSize"
+            android:background="@drawable/ll_layer_2"
+            android:elevation="20dp"
+            android:translationY="@dimen/bottomSheetSize"
+            app:layout_constraintBottom_toTopOf="@id/cart">
+
+            <ImageView
+                android:id="@+id/hBSIV"
+                style="@style/matchRel"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:src="@drawable/icon_cart_1"
+                app:layout_constraintHorizontal_bias="0.9" />
+
+            <LinearLayout
+                android:id="@+id/hBSLL"
+                style="@style/matchRel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintHorizontal_bias="0.18">
+
+                <TextView
+                    android:id="@+id/hBSTV"
+                    style="@style/sumPriceText" />
+
+                <TextView
+                    android:id="@+id/hBSPrice"
+                    style="@style/sumPriceNumb" />
+
+                <TextView
+                    android:id="@+id/hBSCurr"
+                    style="@style/sumPriceCurr" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/hBSLine"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:background="@drawable/bottom_nav_line_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.18"
+                app:layout_constraintWidth_percent="0.15" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cart"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/CS"
+            android:elevation="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.55">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cartEmpty"
+                style="@style/matchRel"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    style="@style/matchRel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/cartEmptyIV"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/cart_empty_1" />
+
+                    <TextView
+                        android:id="@+id/cartEmptyTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/cartEmpty"
+                        android:textColor="@color/CSO"
+                        android:textSize="19dp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCart"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/cartSum"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cartSum"
+                android:layout_width="match_parent"
+                android:layout_height="97dp"
+                android:background="@color/CSV"
+                android:elevation="5dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <LinearLayout
+                    style="@style/matchRel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintHorizontal_bias="0.18">
+
+                    <TextView
+                        android:id="@+id/sumOfItems"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/CSO_WEAK2"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/hBS2TV"
+                            style="@style/sumPriceText" />
+
+                        <TextView
+                            android:id="@+id/hBS2Price"
+                            style="@style/sumPriceNumb" />
+
+                        <TextView
+                            android:id="@+id/hBS2Curr"
+                            style="@style/sumPriceCurr" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cartPay"
+                    style="@style/matchRel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cart_pay_1"
+                    android:paddingHorizontal="19sp"
+                    android:paddingVertical="5sp"
+                    android:text="@string/cartPay"
+                    android:textColor="@color/GREEN_O"
+                    app:layout_constraintHorizontal_bias="0.9" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/nav"
+        android:paddingTop="@dimen/statusBarSize">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/navCL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="MissingConstraints,ContentDescription">
+
+            <ImageView
+                android:id="@+id/userAvatar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/default_user_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintHorizontal_bias="0.15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.3" />
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/CSO"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/userAvatar"
+                app:layout_constraintTop_toBottomOf="@id/userAvatar"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/userTel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/CSO"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/userAvatar"
+                app:layout_constraintTop_toBottomOf="@id/userName" />
+
+            <ImageView
+                android:id="@+id/navNotif"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/hover_1"
+                android:padding="10dp"
+                android:src="@drawable/icon_notif_1"
+                app:layout_constraintBottom_toBottomOf="@id/userTel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/userName" />
+
+            <View
+                android:id="@+id/navDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="13dp"
+                android:background="@color/navDivider"
+                app:layout_constraintTop_toBottomOf="@id/userTel" />
+
+            <LinearLayout
+                android:id="@+id/navButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                app:layout_constraintTop_toBottomOf="@id/navDivider" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

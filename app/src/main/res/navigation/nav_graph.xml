@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="uk.easys.easymarketing.page.Home"
+        android:label="fragment_home" />
+
+    <fragment
+        android:id="@+id/cate"
+        android:name="uk.easys.easymarketing.page.Cate"
+        android:label="fragment_cate" />
+
+    <fragment
+        android:id="@+id/subc"
+        android:name="uk.easys.easymarketing.page.Subc"
+        android:label="fragment_subc" />
+
+
+    <action
+        android:id="@+id/toHome"
+        app:destination="@id/home" />
+
+    <action
+        android:id="@+id/toCate"
+        app:destination="@id/cate" />
+
+    <action
+        android:id="@+id/toSubc"
+        app:destination="@id/subc" />
+
+    <action
+        android:id="@+id/toProf"
+        app:destination="@id/home" />
+
+    <action
+        android:id="@+id/toSupp"
+        app:destination="@id/home" />
+
+    <action
+        android:id="@+id/toAbut"
+        app:destination="@id/home" />
+
+    <action
+        android:id="@+id/toFaqs"
+        app:destination="@id/home" />
+</navigation>

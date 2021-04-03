@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:context=".Single"
+    tools:ignore="MissingConstraints,ContentDescription">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tbh"
+        android:layout_marginTop="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tbNav"
+            style="@style/tbIcon"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/tvNavIV"
+                style="@style/tbIconIV"
+                android:src="@drawable/navbar_1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tbShare"
+            style="@style/tbIcon"
+            app:layout_constraintEnd_toStartOf="@id/tbSearch">
+
+            <ImageView
+                android:id="@+id/tbShareIV"
+                style="@style/tbIconIV"
+                android:src="@drawable/share_1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tbSearch"
+            style="@style/tbIcon"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/tbSearchIV"
+                style="@style/tbIconIV"
+                android:src="@drawable/search_1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/tbSearchET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/tbSearchET"
+            android:textColor="@color/CSV4"
+            android:textColorHint="@color/CSV"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/tbSearch"
+            app:layout_constraintStart_toEndOf="@id/tbNav" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:id="@+id/SV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:id="@+id/LL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="30dp">
+
+            <com.blure.complexview.ComplexView
+                android:id="@+id/sProduct"
+                style="@style/card_1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    style="@style/alignParent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_1">
+
+                    <ImageView
+                        android:id="@+id/sCardBanner"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/banner_price_1"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/gallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="420dp"
+                        android:layout_marginTop="93dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorEnabled="true"
+                        app:sliderIndicatorGravity="bottom|center_horizontal"
+                        app:sliderIndicatorMarginBottom="0dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="4dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="#FA4252"
+                        app:sliderIndicatorUnselectedColor="#D8D8D8"
+                        app:sliderScrollTimeInSec="2"
+                        app:sliderStartAutoCycle="true" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/sBook"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/hover_1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/sBookIV"
+                            style="@style/match"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:src="@drawable/book_1_trans"
+                            app:layout_constraintHeight_percent="0.7"
+                            app:layout_constraintWidth_percent="0.594" /><!--0.84895833-->
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginRight="10dp"
+                        android:rotation="45"
+                        android:text="@string/sBannerPrice"
+                        android:textColor="@color/CPO"
+                        android:textSize="25dp"
+                        app:layout_constraintRight_toRightOf="@id/sCardBanner"
+                        app:layout_constraintTop_toTopOf="@id/sCardBanner" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="70dp"
+                        android:alpha="0.69"
+                        android:background="@color/CSV2_1"
+                        app:layout_constraintTop_toBottomOf="@id/gallery" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="95dp"
+                        android:orientation="vertical"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="30dp"
+                        app:layout_constraintTop_toBottomOf="@id/gallery">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/sProdInfo1"
+                                style="@style/sProdInfo"
+                                android:text="شامپوی لورئال السوه آبی"
+                                android:textColor="@color/CSV4"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/sProdInfo2"
+                                style="@style/sProdInfo"
+                                android:text="ضد شوره و نرم کننده 450 گرمی"
+                                android:textColor="@color/CSV"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingStart="7dp"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="5dp"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/oldPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/oldPrice"
+                                    android:textColor="@color/CSV2"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/newPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="@string/newPrice"
+                                    android:textColor="@color/CP"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/stars"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <ImageView style="@style/star_1" />
+
+                                <ImageView style="@style/star_1" />
+
+                                <ImageView style="@style/star_1" />
+
+                                <ImageView style="@style/star_1_off" />
+
+                                <ImageView style="@style/star_1_off" />
+
+                                <TextView
+                                    android:id="@+id/rate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="3/5"
+                                    android:textColor="@color/star_1"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.blure.complexview.ComplexView>
+
+            <com.blure.complexview.ComplexView
+                style="@style/card_1"
+                android:layout_marginTop="15dp"
+                app:shadowAlpha="0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sAddToCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/positive_1"
+                    android:background="@drawable/add_to_cart_1">
+
+                    <TextView
+                        android:id="@+id/sAddToCartTV"
+                        style="@style/match"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sAddToCart"
+                        android:textColor="@color/CPO"
+                        android:textSize="19sp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.blure.complexview.ComplexView>
+
+            <com.blure.complexview.ComplexView
+                style="@style/card_1"
+                android:layout_marginTop="15dp"
+                app:shadowAlpha="0">
+
+                <LinearLayout
+                    android:id="@+id/sDesc1"
+                    style="@style/sDesc">
+
+                    <TextView
+                        android:id="@+id/sDesc1Title"
+                        style="@style/sDescTitle"
+                        android:text="@string/sDesc1Title" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/brandName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/brandName" />
+
+                            <TextView
+                                android:id="@+id/brand"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp"
+                                android:text="@string/brand"
+                                android:textColor="@color/like" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/weight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/weight" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:background="@drawable/spinner_1">
+
+                                <ImageView
+                                    style="@style/match"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginStart="10dp"
+                                    android:src="@drawable/show_more_1"
+                                    app:layout_constraintHorizontal_bias="1" />
+
+                                <Spinner
+                                    android:id="@+id/spinner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:background="#00000000"
+                                    android:paddingStart="25dp" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.blure.complexview.ComplexView>
+
+            <com.blure.complexview.ComplexView
+                style="@style/card_1"
+                android:layout_marginTop="15dp"
+                app:shadowAlpha="0">
+
+                <LinearLayout
+                    android:id="@+id/sDesc2"
+                    style="@style/sDesc">
+
+                    <TextView
+                        android:id="@+id/sDesc2Title"
+                        style="@style/sDescTitle"
+                        android:text="@string/sDesc2Title" />
+
+                    <TextView
+                        android:id="@+id/sDesc2Main"
+                        style="@style/sDescMain"
+                        android:text="@string/sDesc2" />
+
+                    <ImageView
+                        android:id="@+id/sDesc2More"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="end"
+                        android:background="@drawable/hover_1"
+                        android:padding="8dp"
+                        android:src="@drawable/show_more_1" />
+                </LinearLayout>
+            </com.blure.complexview.ComplexView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="36dp"
+                    android:paddingEnd="36dp">
+
+                    <TextView
+                        android:id="@+id/sCommentsTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sComments"
+                        android:textColor="@color/CSV3"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@color/CSV"
+                        app:layout_constraintBottom_toBottomOf="@id/sCommentsTV"
+                        app:layout_constraintEnd_toStartOf="@id/sComCount"
+                        app:layout_constraintStart_toEndOf="@id/sCommentsTV"
+                        app:layout_constraintTop_toTopOf="@id/sCommentsTV" />
+
+                    <TextView
+                        android:id="@+id/sComCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sComCount"
+                        android:textColor="@color/CSV"
+                        android:textSize="19sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sComCL1"
+                    style="@style/sComment">
+
+                    <ImageView style="@style/sComUser" />
+
+                    <TextView
+                        android:id="@+id/sCom1"
+                        style="@style/sComContent"
+                        android:text="@string/sCom1" />
+
+                    <TextView
+                        android:id="@+id/sComDate1"
+                        style="@style/sComDate"
+                        android:text="@string/sComDate" />
+
+                    <ImageView
+                        android:id="@+id/sLike1IV"
+                        style="@style/sLikeIV"
+                        app:layout_constraintEnd_toStartOf="@id/sLike1TV"
+                        app:layout_constraintTop_toBottomOf="@id/sCom1" />
+
+                    <TextView
+                        android:id="@+id/sLike1TV"
+                        style="@style/sLikeTV"
+                        app:layout_constraintStart_toEndOf="@id/sLike1IV"
+                        app:layout_constraintTop_toBottomOf="@id/sCom1" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sComCL2"
+                    style="@style/sComment"
+                    android:background="@color/sCommentRep">
+
+                    <ImageView
+                        style="@style/sComUser"
+                        android:layout_marginStart="45dp" />
+
+                    <TextView
+                        android:id="@+id/sCom2"
+                        style="@style/sComContent"
+                        android:paddingStart="115dp"
+                        android:text="@string/sCom2" />
+
+                    <TextView
+                        android:id="@+id/sComDate2"
+                        style="@style/sComDate"
+                        android:text="@string/sComDate" />
+
+                    <ImageView
+                        android:id="@+id/sLike2IV"
+                        style="@style/sLikeIV"
+                        app:layout_constraintEnd_toStartOf="@id/sLike2TV"
+                        app:layout_constraintTop_toBottomOf="@id/sCom2" />
+
+                    <TextView
+                        android:id="@+id/sLike2TV"
+                        style="@style/sLikeTV"
+                        app:layout_constraintStart_toEndOf="@id/sLike2IV"
+                        app:layout_constraintTop_toBottomOf="@id/sCom2" />
+
+                    <View style="@style/sComDivider" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sComCL3"
+                    style="@style/sComment">
+
+                    <ImageView style="@style/sComUser" />
+
+                    <TextView
+                        android:id="@+id/sCom3"
+                        style="@style/sComContent"
+                        android:text="@string/sCom3" />
+
+                    <TextView
+                        android:id="@+id/sComDate3"
+                        style="@style/sComDate"
+                        android:text="@string/sComDate" />
+
+                    <ImageView
+                        android:id="@+id/sLike3IV"
+                        style="@style/sLikeIV"
+                        app:layout_constraintEnd_toStartOf="@id/sLike3TV"
+                        app:layout_constraintTop_toBottomOf="@id/sCom3" />
+
+                    <TextView
+                        android:id="@+id/sLike3TV"
+                        style="@style/sLikeTV"
+                        app:layout_constraintStart_toEndOf="@id/sLike3IV"
+                        app:layout_constraintTop_toBottomOf="@id/sCom3" />
+
+                    <View style="@style/sComDivider" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/sComAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/hover_1"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:text="@string/sComAll"
+                android:textColor="@color/CSV4"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/sComSend"
+                style="@style/button_1"
+                android:layout_marginTop="30dp"
+                android:text="@string/sComSend" />
+
+
+            <com.blure.complexview.ComplexView
+                android:id="@+id/sComNew"
+                style="@style/card_1"
+                android:layout_marginTop="100dp">
+
+                <LinearLayout
+                    style="@style/alignParent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_1"
+                    android:gravity="end"
+                    android:orientation="vertical"
+                    android:paddingStart="25dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="25dp"
+                    android:paddingBottom="20dp">
+
+                    <EditText
+                        android:id="@+id/sComET"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/desc_1"
+                        android:gravity="top|start"
+                        android:hint="@string/sComET"
+                        android:paddingStart="20dp"
+                        android:paddingTop="15dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="15dp"
+                        android:textColorHint="@color/CSV2"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/sComRealSend"
+                        style="@style/button_1"
+                        android:layout_marginTop="20dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:text="@string/sComRealSend" />
+                </LinearLayout>
+            </com.blure.complexview.ComplexView>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/tbShadow"
+        style="@style/shadow_1"
+        android:layout_marginTop="10dp"
+        android:alpha="0.65"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

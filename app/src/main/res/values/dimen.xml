@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- GLOBAL -->
+    <dimen name="statusBarSize">25dp</dimen>
+
+    <!-- Intro -->
+    <dimen name="loginETRadius">20dp</dimen>
+
+    <!-- Main -->
+    <dimen name="navButtonCorner">10dp</dimen>
+    <dimen name="bottomSheetSize">85dp</dimen>
+    <dimen name="svBottomPadding">98dp</dimen>
+    <dimen name="orderNumber">20dp</dimen>
+    <dimen name="deleteRadius">@dimen/orderNumber</dimen>
+
+    <!-- Home -->
+    <dimen name="indicatorSize">11dp</dimen>
+    <dimen name="indicatorRadius">5.5dp</dimen>
+    <dimen name="indicatorMargin">2dp</dimen>
+    <dimen name="hSVLayerTop">50dp</dimen>
+</resources>

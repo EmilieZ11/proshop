@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.EasyTest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/CP</item>
+        <item name="colorPrimaryVariant">@color/CPV</item>
+        <item name="colorOnPrimary">@color/CPO</item>
+        <item name="colorSecondary">@color/CS</item>
+        <item name="colorSecondaryVariant">@color/CSV</item>
+        <item name="colorOnSecondary">@color/CSO</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorSecondary</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <!--<item name="android:navigationBarColor" tools:targetApi="lollipop">?attr/colorSecondaryVariant</item>-->
+        <item name="popupMenuStyle">@style/Widget.MaterialComponents.PopupMenu</item>
+        <item name="android:contextPopupMenuStyle" tools:ignore="NewApi">
+            @style/Widget.MaterialComponents.PopupMenu.ContextMenu
+        </item>
+        <item name="actionOverflowMenuStyle">
+            @style/Widget.MaterialComponents.PopupMenu.Overflow
+        </item>
+    </style>
+</resources>

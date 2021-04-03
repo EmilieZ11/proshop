@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyEllipsis">
+    <string name="app_name">Easy Test</string>
+
+    <!-- Single-->
+    <string name="tbSearchET">چیزی بنویسید</string>
+    <string name="sBannerPrice">16%</string>
+    <string name="sAddToCart">افزودن به سبد خرید</string>
+    <string name="sDesc1Title">ویژگی های محصول</string>
+    <string name="sDesc2Title">توضیحات</string>
+    <string name="sDesc2">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگر ها و متون بلکه روزنامه و مجله در ستون و سطر آنچنان که لازم ...</string>
+    <string name="sComments">نظرات کاربران</string>
+    <string name="sComCount">6</string>
+    <string name="sCom1">سارا ولدبیگی سلام من این شامپو رو خریدم و هم قیمتش نسبت به جاهای دیگه ارزون تر بود هم زود ...</string>
+    <string name="sCom2">زود مارکت سلام ممنون از شما دوست عزیز، خوشحالیم که از خریدتون راضی هستید</string>
+    <string name="sCom3">@string/sCom1</string>
+    <string name="sComDate">دی 98 21</string>
+    <string name="sComAll">مشاهده همه نظرها</string>
+    <string name="sComSend">ثبت نظر</string>
+    <string name="sComET">نظر خود را اینجا بنویسید</string>
+    <string name="sComRealSend">ثبت نظر شما</string>
+    <string name="brandName">برند:</string>
+    <string name="weight">وزن:</string>
+    <string name="brand"><u>لورئال</u></string>
+    <string-array name="weights">
+        <item name="0">300 گرم</item>
+        <item name="1">400 گرم</item>
+        <item name="2">500 گرم</item>
+        <item name="3">600 گرم</item>
+        <item name="4">700 گرم</item>
+    </string-array>
+    <string name="oldPrice"><strike>20000</strike> تومان</string>
+    <string name="newPrice">13500 تومان</string>
+</resources>

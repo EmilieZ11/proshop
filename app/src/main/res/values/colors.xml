@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="CP">#FA4252</color>
+    <color name="CPV">#FF8C41</color>
+    <color name="CPO">#FFF</color>
+    <color name="CS">#F8F8F8</color>
+    <color name="CSV">#FFF</color>
+    <color name="CSO">#646464</color>
+    <color name="TP">#00000000</color>
+    <color name="GREEN">#0DB413</color>
+    <color name="GREEN_WEAK_1">#40DF46</color>
+    <color name="GREEN_O">@color/CPO</color>
+    <color name="GRAY">#EEE</color>
+    <color name="CP_WEAK1">#33FA4252</color>
+    <color name="CP_WEAK2">#22FA4252</color>
+    <color name="CP_WEAK3">#BBFA4252</color>
+    <color name="CSO_WEAK1">#939393</color>
+    <color name="CSO_WEAK2">#888</color>
+    <color name="CSO_WEAK3">#AAA</color>
+
+    <!-- GLOBAL -->
+    <color name="hover_1">#19000000</color>
+    <color name="shadow_1">#55000000</color>
+    <color name="cat_title_1">#8CAD5F30</color>
+    <color name="cat_title_2">#8C3B402C</color>
+    <color name="cat_title_3">#8CE87F01</color>
+    <color name="cat_title_4">#8C98662A</color>
+
+    <!-- Intro -->
+    <color name="loginET">#BBB</color>
+    <color name="loginETBorder">#DDD</color>
+
+    <!-- Main -->
+    <color name="nav">@color/CSV</color>
+    <color name="navDivider">#DDD</color>
+    <color name="navButtonHover">@color/CP_WEAK2</color>
+    <color name="navBtnSelected">@color/CP</color>
+    <color name="plusMinus">@color/CSO_WEAK2</color>
+</resources>

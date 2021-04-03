@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="CP">#FA4252</color>
+    <color name="CPV">#D13341</color>
+    <color name="CPO">@color/CS</color>
+    <color name="CS">#FFF</color>
+    <color name="CSV">#BCBCBC</color>
+    <color name="CSV2">#D8D8D8</color>
+    <color name="CSV2_1">#E3E3E3</color>
+    <color name="CSV3">#8E8E8E</color>
+    <color name="CSV4">#757575</color>
+    <color name="CSO">#222</color>
+
+    <!-- GLOBAL -->
+    <color name="hover_1">#19000000</color>
+    <color name="card_1">@color/CS</color>
+    <color name="positive_1">#0DB413</color>
+    <color name="positive_1_pressed">#08780D</color>
+    <color name="banner_1">@color/CP</color>
+    <color name="shadow_1">#55000000</color>
+    <color name="button_1">@color/CP</color>
+    <color name="button_1_pressed">@color/CPV</color>
+    <color name="like">#FA4252</color>
+    <color name="star_1">#D69900</color>
+
+    <!-- Single -->
+    <color name="sCommentRep">#F5F5F5</color>
+</resources>

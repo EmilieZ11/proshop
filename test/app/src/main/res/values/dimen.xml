@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tbh">50dp</dimen>
+    <dimen name="card_radius">25dp</dimen>
+    <dimen name="positive_1">70dp</dimen>
+    <dimen name="positive_1_radius">35dp</dimen>
+    <dimen name="button_1">70dp</dimen>
+    <dimen name="button_1_radius">35dp</dimen>
+</resources>

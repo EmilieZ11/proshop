@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="match">
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+    </style>
+
+    <style name="alignParent">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="card_1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="radius">@dimen/card_radius</item>
+        <item name="shadow">true</item>
+        <item name="shadowAlpha">50</item>
+        <item name="shadowColor">#000000</item>
+        <item name="shadowSpread">2</item>
+    </style>
+
+    <style name="tbIcon">
+        <item name="android:layout_width">@dimen/tbh</item>
+        <item name="android:layout_height">@dimen/tbh</item>
+        <item name="android:background">@drawable/hover_1</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+
+    <style name="tbIconIV" parent="match">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="layout_constraintHeight_percent">0.45</item>
+        <item name="layout_constraintWidth_percent">0.45</item>
+    </style>
+
+    <style name="shadow_1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">5dp</item>
+        <item name="android:background">@drawable/shadow_1</item>
+    </style>
+
+    <style name="button_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/button_1</item>
+        <item name="android:paddingLeft">50dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingRight">50dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:textColor">@color/CPO</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="star_1">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:src">@android:drawable/star_on</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginRight">1dp</item>
+    </style>
+
+    <style name="star_1_off" parent="star_1">
+        <item name="android:src">@android:drawable/star_off</item>
+        <item name="android:alpha">0.7</item>
+    </style>
+
+
+    <!-- Single -->
+    <style name="sProdInfo">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingStart">7dp</item>
+        <item name="android:paddingEnd">7dp</item>
+    </style>
+
+    <style name="sDesc">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/desc_1</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingLeft">28dp</item>
+        <item name="android:paddingRight">28dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="sDescMain">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/CSV3</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <style name="sDescTitle" parent="sDescMain">
+        <item name="android:textSize">19.5sp</item>
+        <item name="android:textColor">@color/CSV4</item>
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+
+    <style name="sComment">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="sComUser">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:src">@drawable/user_1</item>
+        <item name="android:alpha">0.5</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+    </style>
+
+    <style name="sComContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">95dp</item>
+        <item name="android:paddingEnd">35dp</item>
+        <item name="android:paddingBottom">11dp</item>
+        <item name="android:textColor">@color/CSV3</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginBottom">40dp</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+
+    <style name="sComDate">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingEnd">35dp</item>
+        <item name="android:textColor">@color/CSV3</item>
+        <item name="android:textSize">12.5sp</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+    </style>
+
+    <style name="sComDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@color/CSV2_1</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+
+    <style name="sLikeIV">
+        <item name="android:layout_width">23dp</item>
+        <item name="android:layout_height">23dp</item>
+        <item name="android:src">@drawable/like_1_trans</item>
+        <item name="layout_constraintHorizontal_bias">0.35</item>
+        <item name="layout_constraintHorizontal_chainStyle">packed</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+    </style>
+
+    <style name="sLikeTV">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:paddingBottom">22dp</item>
+        <item name="android:text">10</item>
+        <item name="android:textColor">@color/CSV3</item>
+        <item name="android:textSize">16sp</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+    </style>
+</resources>

@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">ProShop</string>
+
+    <!-- Intro -->
+    <string name="welcomeEN">Welcome to ProShop</string>
+    <string name="welcomeNative">به پروشاپ خوش آمدید</string>
+    <string name="enterPhone">شماره موبایل خود را وارد کنید</string>
+    <string name="enterCode">کد تایید پیامک شده را وارد کنید</string>
+    <string name="sendCode">تایید شماره موبایل</string>
+    <string name="verifyCode">تایید</string>
+    <string name="codeSent">در صورت عدم ارسال کد مجددا تلاش کنید</string>
+    <string name="resendCode">ارسال مجدد کد</string>
+
+    <!-- #Toolbar -->
+    <string name="searchHint">Type something...</string>
+
+    <!-- #Nav -->
+    <string name="navHome">الصفحة الرئیسیة</string>
+    <string name="navCategories">التصنيفات</string>
+    <string name="navProfile">الملف الشخصي</string>
+    <string name="navSupport">الدعم</string>
+    <string name="navAboutUs">المعلومات عنا</string>
+    <string name="navFAQ">الدعم</string>
+    <string name="navExit">خروج</string>
+    <string-array name="pages">
+        <item>@string/navHome</item>
+        <item>@string/navCategories</item>
+        <item>@string/navProfile</item>
+        <item>@string/navSupport</item>
+        <item>@string/navAboutUs</item>
+        <item>@string/navFAQ</item>
+    </string-array>
+
+    <!-- #User -->
+    <string name="visName">%1$s %2$s</string>
+
+    <!-- #Product -->
+    <string name="discount">خصم %1$s</string>
+    <string name="oldPrice" formatted="true"><u>%1$s دینار</u></string>
+    <string name="newPrice">%1$s دینار</string>
+    <string name="viewAll">عرض الکل</string>
+
+    <!-- #Cart -->
+    <string name="delete">حذف</string>
+    <string name="cartEmpty">عربة التسوق فارغة</string>
+    <string name="sumPriceText">إجمالی الشراء:</string>
+    <string name="sumPriceCurr">دینار</string>
+    <string name="sumOfItems">عدد العناصر: %1$d عدد</string>
+    <string name="cartPay">التأکید و یشتری</string>
+</resources>

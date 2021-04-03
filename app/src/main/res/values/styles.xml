@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- GLOBAL -->
+    <style name="match">
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+    </style>
+
+    <style name="matchRel">
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+    </style>
+
+    <style name="alignParent">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="loading">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="lottie_autoPlay">true</item>
+        <item name="lottie_colorFilter">@color/CP</item>
+        <item name="lottie_loop">true</item>
+        <item name="lottie_rawRes">@raw/loading_1</item>
+    </style>
+
+
+    <!-- Intro -->
+    <style name="loginET" parent="Theme.EasyMarketing">
+        <item name="colorSecondary">@color/loginET</item>
+    </style>
+
+
+    <!-- Main -->
+    <style name="tbIcon">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/hover_1</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+
+    <style name="tbIconIV" parent="match">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="layout_constraintHeight_percent">0.4</item>
+        <item name="layout_constraintWidth_percent">0.4</item>
+    </style>
+
+    <style name="shadow_1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">5dp</item>
+        <item name="android:background">@drawable/shadow_1</item>
+    </style>
+
+
+    <!-- Home -->
+    <style name="fakeRadius">
+        <item name="android:layout_width">@dimen/hSVLayerTop</item>
+        <item name="android:layout_height">@dimen/hSVLayerTop</item>
+        <item name="android:src">@drawable/fake_radius_1</item>
+        <item name="android:alpha">0</item>
+        <item name="layout_constraintTop_toBottomOf">@id/toolbar</item>
+    </style>
+
+    <style name="conTitle">
+        <item name="android:textColor">@color/CSO</item>
+        <item name="android:textSize">15.5sp</item>
+    </style>
+
+    <style name="conViewAll">
+        <item name="android:text">@string/viewAll</item>
+        <item name="android:textColor">@color/CSO_WEAK1</item>
+        <item name="android:background">@drawable/view_all_1</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingLeft">9dp</item>
+        <item name="android:paddingRight">9dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="section"><!--PADDINGS HERE WILL BE APPLIED TO EACH CHILD!-->
+        <item name="android:scrollbars">horizontal</item>
+        <item name="layoutManager">androidx.recyclerview.widget.LinearLayoutManager</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+
+    <!-- #Cart -->
+    <style name="sumPriceText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/sumPriceText</item>
+        <item name="android:textColor">@color/CSO</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="sumPriceNumb">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:textColor">@color/GREEN</item>
+        <item name="android:textSize">14.5sp</item>
+    </style>
+
+    <style name="sumPriceCurr">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:text">@string/sumPriceCurr</item>
+        <item name="android:textColor">@color/GREEN</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>

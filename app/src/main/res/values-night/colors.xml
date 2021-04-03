@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="CP">#444</color>
+    <color name="CPV">#666</color>
+    <color name="CPO">#FFF</color>
+    <color name="CS">#222</color>
+    <color name="CSV">#000</color>
+    <color name="CSO">#646464</color>
+
+    <!-- GLOBAL -->
+    <color name="hover_1">#19000000</color>
+    <color name="shadow_1">#55000000</color>
+</resources>
